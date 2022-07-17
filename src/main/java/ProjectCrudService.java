@@ -3,50 +3,94 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ProjectCrudService {
+public class ProjectCrudService{
+
+    static Connection connection = ConnectionToDB.getConnection();
+
     private PreparedStatement createSt;
-    private PreparedStatement readSt;
-    private PreparedStatement getSumOfSalarySt;
-    private PreparedStatement getDevelopers;
-    private PreparedStatement getCountOfDevelopers;
-    private PreparedStatement getAllProjects;
 
-    public ProjectCrudService(Connection connection) throws SQLException {
-
-        createSt = connection.prepareStatement("INSERT INTO PROJECT (name, TIME_OF_CREATION, COMPANY_ID,CUSTOMER_ID)" +
-                " VALUES (?, ?, ?,?)");
-
-        getAllProjects = connection
-                .prepareStatement("SELECT id, TIME_OF_CREATION, CUSTOMER_ID, COMPANY_ID, NAME FROM PROJECT");
-
-        readSt = connection
-                .prepareStatement("SELECT id, TIME_OF_CREATION, CUSTOMER_ID, COMPANY_ID FROM PROJECT WHERE id = ?");
-
-        getSumOfSalarySt = connection.prepareStatement("""
-                SELECT sum(SALARY)
-                from DEVELOPER
-                         join DEVELOPER_PROJECT on DEVELOPER.ID = DEVELOPER_PROJECT.DEVELOPER_ID
-                         join PROJECT  on DEVELOPER_PROJECT.PROJECT_ID = PROJECT.ID
-                where PROJECT_ID = ?
-                """);
-
-        getCountOfDevelopers = connection.prepareStatement("""
-                SELECT Project.*, COUNT(DEVELOPER.id)
-                                                                  FROM project
-                                                                  JOIN developer_project ON developer_project.project_id = project.id
-                                                                  JOIN developer ON developer.id = developer_project.developer_id
-                                                                  where PROJECT_ID = ?
-                                                                  GROUP BY project.id""");
-
-        getDevelopers = connection.prepareStatement("""
-                SELECT DEVELOPER.*
-                from DEVELOPER
-                         join DEVELOPER_PROJECT on DEVELOPER.ID = DEVELOPER_PROJECT.DEVELOPER_ID
-                         join PROJECT  on DEVELOPER_PROJECT.PROJECT_ID = PROJECT.ID
-                where PROJECT_ID = ?
-                              
-                """);
+    {
+        try {
+            createSt = connection.prepareStatement("INSERT INTO PROJECT (name, TIME_OF_CREATION, COMPANY_ID,CUSTOMER_ID)" +
+                    " VALUES (?, ?, ?,?)");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
+
+    private PreparedStatement readSt;
+
+    {
+        try {
+            readSt = connection
+                    .prepareStatement("SELECT id, TIME_OF_CREATION, CUSTOMER_ID, COMPANY_ID FROM PROJECT WHERE id = ?");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    private static PreparedStatement getSumOfSalarySt;
+
+    static {
+        try {
+            getSumOfSalarySt = connection.prepareStatement("""
+                        SELECT sum(SALARY)
+                        from DEVELOPER
+                                 join DEVELOPER_PROJECT on DEVELOPER.ID = DEVELOPER_PROJECT.DEVELOPER_ID
+                                 join PROJECT  on DEVELOPER_PROJECT.PROJECT_ID = PROJECT.ID
+                        where PROJECT_ID = ?
+                        """);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static PreparedStatement getDevelopers;
+
+    static {
+        try {
+            getDevelopers = connection.prepareStatement("""
+                        SELECT DEVELOPER.*
+                        from DEVELOPER
+                                 join DEVELOPER_PROJECT on DEVELOPER.ID = DEVELOPER_PROJECT.DEVELOPER_ID
+                                 join PROJECT  on DEVELOPER_PROJECT.PROJECT_ID = PROJECT.ID
+                        where PROJECT_ID = ?
+                                      
+                        """);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static PreparedStatement getCountOfDevelopers;
+
+    static {
+        try {
+            getCountOfDevelopers = connection.prepareStatement("""
+                        SELECT Project.*, COUNT(DEVELOPER.id)
+                                                                          FROM project
+                                                                          JOIN developer_project ON developer_project.project_id = project.id
+                                                                          JOIN developer ON developer.id = developer_project.developer_id
+                                                                          where PROJECT_ID = ?
+                                                                          GROUP BY project.id""");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    private static PreparedStatement getAllProjects;
+
+    static {
+        try {
+            getAllProjects = connection
+                    .prepareStatement("SELECT id, TIME_OF_CREATION, CUSTOMER_ID, COMPANY_ID, NAME FROM PROJECT");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     public void create(Project project) throws SQLException {
         createSt.setString(1, project.getName());
@@ -75,7 +119,7 @@ public class ProjectCrudService {
         return result;
     }
 
-    public void getSumOfSalaryByProjectID(int projectID) throws SQLException {
+    public static void getSumOfSalaryByProjectID(int projectID) throws SQLException {
 
         getSumOfSalarySt.setLong(1, projectID);
         ResultSet resultSet = getSumOfSalarySt.executeQuery();
@@ -86,7 +130,7 @@ public class ProjectCrudService {
 
         System.out.println("sum = " + sum);
     }
-    public long getCountOfDevByProject(long id) throws SQLException {
+    public static long getCountOfDevByProject(long id) throws SQLException {
         getCountOfDevelopers.setLong(1,id);
         ResultSet resultSet = getCountOfDevelopers.executeQuery();
         if(!resultSet.next()) {
@@ -96,7 +140,7 @@ public class ProjectCrudService {
 
     }
 
-    public void getAllProjects() throws SQLException {
+    public static void getAllProjects() throws SQLException {
         ResultSet resultSet = getAllProjects.executeQuery();
 
         while ((resultSet.next())) {
@@ -105,7 +149,7 @@ public class ProjectCrudService {
         }
     }
 
-    public void getDeveloperByProject(int projectID) throws SQLException {
+    public static void getDeveloperByProject(int projectID) throws SQLException {
         getDevelopers.setLong(1, projectID);
         ResultSet resultSet = getDevelopers.executeQuery();
 

@@ -5,26 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d367bd64-6987-4c76-89d7-38fb6da18eda" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Company.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ConnectionToDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CustomerCrudService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Developer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DeveloperCrudService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ProjectCrudService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectDB.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/projectDB.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectDB.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/projectDB.trace.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DeveloperCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeveloperCrudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectCrudService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +178,8 @@
       <workItem from="1657481870228" duration="1803000" />
       <workItem from="1657537249376" duration="11332000" />
       <workItem from="1657636766490" duration="4827000" />
-      <workItem from="1657642195399" duration="2439000" />
+      <workItem from="1657642195399" duration="3075000" />
+      <workItem from="1658044422137" duration="1663000" />
     </task>
     <servers />
   </component>
