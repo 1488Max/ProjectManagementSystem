@@ -1,3 +1,7 @@
+import CrudServices.CustomerCrudService;
+import CrudServices.DeveloperCrudService;
+import CrudServices.ProjectCrudService;
+
 import java.sql.SQLException;
 
 
@@ -25,6 +29,9 @@ public class Main {
         System.out.println("List of all projects in certain format");
 
         ProjectCrudService.getAllProjects();
+
+
+        CustomerCrudService.updateNameByID(1, "Max");
 
     }
 }

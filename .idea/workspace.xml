@@ -5,12 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d367bd64-6987-4c76-89d7-38fb6da18eda" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/init_db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bac11784-80dc-4922-8be7-74f016d6dda4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bac11784-80dc-4922-8be7-74f016d6dda4/storage_v2/_src_/database/PROJECTDB.NwXCcA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bac11784-80dc-4922-8be7-74f016d6dda4/storage_v2/_src_/database/PROJECTDB.NwXCcA/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bac11784-80dc-4922-8be7-74f016d6dda4/storage_v2/_src_/database/PROJECTDB.NwXCcA/schema/PUBLIC.aaZQjQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectDB.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/projectDB.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectDB.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/projectDB.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DeveloperCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeveloperCrudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectDB.mv.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectDB.trace.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectionToDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Connection/ConnectionToDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CustomerCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CrudServices/CustomerCrudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DeveloperCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CrudServices/DeveloperCrudService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectCrudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CrudServices/ProjectCrudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Skill.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +78,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2BiGu8A4UwwcXYPzHY9UeEiphyM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -70,29 +89,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/barga/Downloads/ProjectManagementSystem/projectDB.mv.db&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/barga/Downloads/ProjectManagementSystem/projectDB.mv.db",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;h2&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "h2",
+      "mysql"
     ],
-    &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;dbcb7ae2-d5d4-47d7-a260-bbe5411394d8&quot;,
-      &quot;dbcb7ae2-d5d4-47d7-a260-bbe5411394d8/database/\&quot;PROJECTDB\&quot;/schema/\&quot;PUBLIC\&quot;&quot;,
-      &quot;dbcb7ae2-d5d4-47d7-a260-bbe5411394d8/database/\&quot;PROJECTDB\&quot;&quot;,
-      &quot;bac11784-80dc-4922-8be7-74f016d6dda4&quot;
+    "RunConfigurationTargetLRU": [
+      "bac11784-80dc-4922-8be7-74f016d6dda4",
+      "9666c011-9464-44da-adf0-57b6cb421a81",
+      "ae365789-2e1e-479a-8283-d2d2948f91b2",
+      "a7f12a56-465b-46d4-8732-fe2f679491b2",
+      "9ce31e56-52fd-4325-8ace-765cc53e85ca"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\barga\Downloads\ProjectManagementSystem\src\main\java" />
@@ -119,16 +140,36 @@
       <data-source id="bac11784-80dc-4922-8be7-74f016d6dda4" />
       <method v="2" />
     </configuration>
-    <configuration name="initialDB.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/src/main/java/initialDB.sql" />
+    <configuration name="init_db.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/init_db.sql" />
       <script-mode>FILE</script-mode>
-      <data-source id="dbcb7ae2-d5d4-47d7-a260-bbe5411394d8" namespace="database/&quot;PROJECTDB&quot;/schema/&quot;PUBLIC&quot;" />
+      <data-source id="9ce31e56-52fd-4325-8ace-765cc53e85ca" />
       <method v="2" />
     </configuration>
     <configuration name="projectDB.mv.db" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/projectDB.mv.db" />
       <script-mode>FILE</script-mode>
       <data-source id="bac11784-80dc-4922-8be7-74f016d6dda4" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ProjectManagementSystem [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="ProjectManagementSystem" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
@@ -152,17 +193,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="Database Script.init_db.sql" />
       <item itemvalue="Database Script.ASD.sql" />
       <item itemvalue="Database Script.projectDB.mv.db" />
-      <item itemvalue="Database Script.initialDB.sql" />
       <item itemvalue="Gradle.ProjectManagementSystem" />
+      <item itemvalue="Gradle.ProjectManagementSystem [dependencies]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.init_db.sql" />
+        <item itemvalue="Gradle.ProjectManagementSystem [dependencies]" />
         <item itemvalue="Database Script.ASD.sql" />
         <item itemvalue="Database Script.projectDB.mv.db" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Database Script.initialDB.sql" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +222,9 @@
       <workItem from="1657537249376" duration="11332000" />
       <workItem from="1657636766490" duration="4827000" />
       <workItem from="1657642195399" duration="3075000" />
-      <workItem from="1658044422137" duration="1663000" />
+      <workItem from="1658044422137" duration="4170000" />
+      <workItem from="1658230614948" duration="6228000" />
+      <workItem from="1658322578871" duration="10454000" />
     </task>
     <servers />
   </component>
